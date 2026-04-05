@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const patterns = [
-  { name: "Dashboard", href: "/patterns/dashboard", description: "Stats cards, charts, and activity feed" },
-  { name: "Data Table", href: "/patterns/data-table", description: "Sortable, filterable table with pagination" },
-  { name: "Detail View", href: "/patterns/detail-view", description: "Record detail with sidebar metadata" },
-  { name: "Settings", href: "/patterns/settings", description: "Tabbed settings with form sections" },
-  { name: "Card Grid", href: "/patterns/card-grid", description: "Responsive grid of content cards" },
-  { name: "Split Pane", href: "/patterns/split-pane", description: "List + detail split layout" },
+  { name: "Dashboard", href: "/dashboard", description: "Stats cards, charts, and activity feed" },
+  { name: "Data Table", href: "/table", description: "Sortable, filterable table with pagination" },
+  { name: "Detail View", href: "/detail", description: "Record detail with sidebar metadata" },
+  { name: "Settings", href: "/settings", description: "Tabbed settings with form sections" },
+  { name: "Card Grid", href: "/grid", description: "Responsive grid of content cards" },
+  { name: "Split Pane", href: "/inbox", description: "Icon rail + list + detail split layout" },
 ];
 
 export default function Home() {
