@@ -121,9 +121,18 @@ The `next.config.ts` sets `output: "standalone"` so the Docker image only includ
 
 The landing page (`/`) lists six pattern routes (implemented in Sprint 1):
 
-- `/patterns/dashboard` — Stats cards, charts, activity feed
-- `/patterns/data-table` — Sortable, filterable table with pagination
-- `/patterns/detail-view` — Record detail with sidebar metadata
-- `/patterns/settings` — Tabbed settings with form sections
-- `/patterns/card-grid` — Responsive grid of content cards
-- `/patterns/split-pane` — List + detail split layout
+- `/dashboard` — Stats cards, charts, activity feed (sidebar layout)
+- `/table` — Sortable, filterable table with pagination (top nav layout)
+- `/detail` — Record detail with sidebar metadata (split form/sidebar)
+- `/settings` — Settings with toggle rows (left nav layout)
+- `/grid` — Responsive grid of content cards (header + filter chips)
+- `/inbox` — Icon rail + list + detail split pane
+
+Shared layout components live in `components/layouts/`:
+
+- `SidebarLayout` — 240px dark sidebar + main area (used by `/dashboard`)
+- `TopNavLayout` — 56px horizontal nav + main area (used by `/table`)
+- `SettingsLayout` — 220px left nav + main area (used by `/settings`)
+- `SplitPaneLayout` — 56px icon rail + 300px list + detail pane (used by `/inbox`)
+
+Sample data lives in `lib/sample-data.ts` as typed constants. Types are exported from `lib/types.ts`.
