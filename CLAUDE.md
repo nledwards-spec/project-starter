@@ -1,3 +1,24 @@
+> **SESSION HYGIENE - auto-load.**
+>
+> 1. **Exit any session >24 hours old.** Handoff to `Next Session Orientation`, restart.
+> 2. **One task = one session.** Don't reuse a session as a workspace across tasks.
+> 3. **Default Sonnet 4.6.** Opus only for architecture or after Sonnet failed twice.
+> 4. **Default context 200k.** 1M only for whole-codebase reads.
+> 5. **/compact before backgrounding any task >5 min.**
+> 6. **Hard cap 8 concurrent shells.** 4 soft target.
+>
+> Full rules: `.claude/GLOBAL-RULES.md` § Session Hygiene.
+
+> **NEVER (will cost you/Nick):**
+>
+> 1. **Push with dirty pre-existing changes.** Run `git status --porcelain` first. Surface to Nick if dirty.
+> 2. **Kill app server processes directly.** No `kill`, `pkill`. Always `pm2 restart {name}`.
+> 3. **Overwrite user-edited files.** Version up (v1 -> v2). When in doubt, version.
+> 4. **Ask "ready to ship?".** Self-check passes -> push. Gate is Railway + use, not approval.
+> 5. **Em dashes in anything another human will read.** Proposals, client emails as Nick, UI strings, in-app copy, READMEs that ship. Use commas or hyphens. Internal files and chat to Nick fine.
+>
+> Full rationale: `.claude/GLOBAL-RULES.md` § Quality, Git, Style.
+
 # project-starter
 
 A reusable Next.js starter template. Clone this repo to bootstrap any new project with a complete, typed foundation: shadcn/ui components, a CSS custom property colour system, Railway-ready deployment, smoke tests, and CI.
